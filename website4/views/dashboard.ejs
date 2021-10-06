@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Home Page</title>
+     
+    <!-- CSS and Javascript files -->
+    <title>Clark State Electronic Health Record</title>
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css'>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/docs.js"></script>
+</head>
+ 
+<body>
+    <!-- Navigation -->
+    <nav class="w3-sidenav  w3-card-2" style="width:160px;">
+        <!-- Logo -->
+        <img src="/img/EHRLogo.png" alt="logo" style="width: 100px; padding-bottom: 20px; margin-left: 30px;">
+    <div class="w3-accordion">
+        <!-- Patient Selection --> 
+        <a onclick="func1()" href="#" style="color: #006A99;">
+        Patient Selection <i class="fa fa-caret-down"></i>
+        </a>
+        <!-- Patient Selection Dropdown -->
+        <div id="dashboard" class="w3-accordion-content w3-white w3-card-4">
+        <a href="#" style="color: #006A99;">Patient Dashboard</a>
+        <a href="#" style="color: #006A99;">History</a>
+        <a href="#" style="color: #006A99;">Imaging</a>
+        <a href="#" style="color: #006A99;">Labs</a>
+        <a href="#" style="color: #006A99;">Care Plan</a>
+        </div>
+        <!-- Vitals -->
+            <a onclick="func2()" href="#" style="color: #006A99;">
+            Vitals <i class="fa fa-caret-down"></i>
+            </a>
+            <!-- Vitals dropdown -->
+            <div id="vitals" class="w3-accordion-content w3-white w3-card-4">
+            <a href="#" style="color: #006A99;">Vitals</a>
+            <a href="#" style="color: #006A99;">Weight</a>
+            <a href="#" style="color: #006A99;">Pain</a>
+            <a href="#" style="color: #006A99;">Input</a>
+            <a href="#" style="color: #006A99;">Output</a>
+            </div>
+            <!-- Patient Assessment -->
+            <a onclick="func3()" href="#" style="color: #006A99;">
+                Patient Assessment<i class="fa fa-caret-down"></i>
+            </a>
+            <div id="patientA" class="w3-accordion-content w3-white w3-card-4">
+                <!-- Daily Care -->
+                <a onclick="func6()" href="#" style="color: #006A99;">
+                    Daily Care<i class="fa fa-caret-down"></i>
+                </a>
+                <!-- Daily Care dropdown -->
+                <div id="dailyCare" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Elimination Table</a>
+                    <a href="#" style="color: #006A99;">Intake Table</a>
+                    <a href="#" style="color: #006A99;">Hygiene Table</a>
+                    <a href="#" style="color: #006A99;">Mobility Table</a>
+                </div>
+
+                <!-- General Head -->
+                <a onclick="func7()" href="#" style="color: #006A99;">General Head<i class="fa fa-caret-down"></i></a>
+                <!-- General Head dropdown -->
+                <div id="general" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Eye Table</a>
+                    <a href="#" style="color: #006A99;">Ears, Nose Oral Table</a>
+                    <a href="#" style="color: #006A99;">Head Table</a>
+                </div>
+                <!-- Cardiovascular -->
+                <a onclick="func8()" href="#" style="color: #006A99;">Cardiovascular<i class="fa fa-caret-down"></i></a>
+                <!-- Cardiovascular dropdown -->
+                <div id="cardiovascular" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Extremity Table</a>
+                </div>
+                <!-- Peripheral Assessment -->
+                <a onclick="func9()" href="#" style="color: #006A99;">Peripheral Pulse Assessment<i class="fa fa-caret-down"></i></a>
+                <!-- Peripheral Assessment dropdown -->
+                <div id="pulseAssess" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Left Carotid Table</a>
+                    <a href="#" style="color: #006A99;">Right Carotid Table</a>
+                    <a href="#" style="color: #006A99;">Left Brachial Table</a>
+                    <a href="#" style="color: #006A99;">Right Brachial Table</a>
+                    <a href="#" style="color: #006A99;">Left Radial Table</a>
+                    <a href="#" style="color: #006A99;">Right Radial Table</a>
+                    <a href="#" style="color: #006A99;">Left Femoral Table</a>
+                    <a href="#" style="color: #006A99;">Right Femoral Table</a>
+                    <a href="#" style="color: #006A99;">Left Popliteal Table</a>
+                    <a href="#" style="color: #006A99;">Right Popliteal Table</a>
+                    <a href="#" style="color: #006A99;">Left Posterior Table</a>
+                    <a href="#" style="color: #006A99;">Right Posterior Table</a>
+                    <a href="#" style="color: #006A99;">Left Dorsalis Table</a>
+                    <a href="#" style="color: #006A99;">Right Dorsalis Table</a>
+                </div>
+                <!-- Gastrointestinal -->
+                <a onclick="func10()" href="#" style="color: #006A99;">Gastrointestinal<i class="fa fa-caret-down"></i></a>
+                <!-- Gastrointestinal dropdown -->
+                <div id="gastro" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Gastrointestinal Table</a>
+                </div>
+                <!-- Genitourinary -->
+                <a onclick="func11()" href="#" style="color: #006A99;">Genitourinary<i class="fa fa-caret-down"></i></a>
+                <!-- Genitourinary dropdown -->
+                <div id="geni" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Genitourinary Table</a>
+                </div>
+                <!-- Integumentary -->
+                <a onclick="func12()" href="#" style="color: #006A99;">Integumentary<i class="fa fa-caret-down"></i></a>
+                <!-- Integumentary dropdown -->
+                <div id="inte" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Integumentary Table</a>
+                    <a href="#" style="color: #006A99;">More Info Table</a>
+                    <a href="#" style="color: #006A99;">Wound Table</a>
+                    <a href="#" style="color: #006A99;">Dressing Change Table</a>
+                </div>
+                <!-- Musculoskeletal -->
+                <a onclick="func13()" href="#" style="color: #006A99;">Musculoskeletal<i class="fa fa-caret-down"></i></a>
+                <!-- Musculoskeletal dropdown -->
+                <div id="muscle" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Musculoskeletal Table</a>
+                </div>
+                <!-- Neurological -->
+                <a onclick="func14()" href="#" style="color: #006A99;">Neurological<i class="fa fa-caret-down"></i></a>
+                <!-- Neurological dropdown -->
+                <div id="neuro" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Mental Table</a>
+                    <a href="#" style="color: #006A99;">Seizure Table</a>
+                </div>
+                <!-- Psychosocial -->
+                <a href="#" style="color: #006A99;">Psychosocial</a>
+                <!-- Respiratory -->
+                <a onclick="func15()" href="#" style="color: #006A99;">Respiratory<i class="fa fa-caret-down"></i></a>
+                <!-- Respiratory dropdown -->
+                <div id="resp" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Breathing Table</a>
+                    <a href="#" style="color: #006A99;">Oxygen Table</a>
+                    <a href="#" style="color: #006A99;">Airways Table</a>
+                </div>
+                <!-- Safety -->
+                <a onclick="func16()" href="#" style="color: #006A99;">Safety<i class="fa fa-caret-down"></i></a>
+                <!-- Safety dropdown -->
+                <div id="safety" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Safety Table</a>
+                </div>
+                <!-- Infection -->
+                <a onclick="func17()" href="#" style="color: #006A99;">Infection<i class="fa fa-caret-down"></i></a>
+                <!-- Infection dropdown -->
+                <div id="infection" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Infection Table</a>
+                </div>
+                <!-- Vascular -->
+                <a onclick="func18()" href="#" style="color: #006A99;">Vascular<i class="fa fa-caret-down"></i></a>
+                <!-- Vascular dropdown -->
+                <div id="vascular" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Vascular Table</a>
+                </div>
+                <!-- Drains & Tubes -->
+                <a onclick="func19()" href="#" style="color: #006A99;">Drains & Tubes<i class="fa fa-caret-down"></i></a>
+                <!-- Drains & Tubes dropdown -->
+                <div id="drains" class="w3-accordion-content w3-white w3-card-4">
+                    <a href="#" style="color: #006A99;">Drains & Tubes Table</a>
+                </div>
+            </div>
+            <!-- Order Entry -->
+            <a href="#" style="color: #006A99;">
+                Order Entry </i>
+            </a>
+            <!-- Medication Administration -->
+            <a onclick="func5()" href="#" style="color: #006A99;">
+                Medication Admin<i class="fa fa-caret-down"></i>
+            </a>
+            <!-- Medication Administration dropdown -->
+            <div id="medAdmin" class="w3-accordion-content w3-white w3-card-4">
+                <a href="#" style="color: #006A99;">Scheduled Medications</a>
+                <a href="#" style="color: #006A99;">PRN Medications</a>
+                <a href="#" style="color: #006A99;">Continous Medications</a>
+                <a href="#" style="color: #006A99;">Respiratory Medications</a>
+                <a href="#" style="color: #006A99;">Discontinued Medications</a>
+            </div>
+
+            <!-- Logout -->
+            <a href="#" style="color: #006A99;">
+                Logout
+            </a>
+    </div>
+    </nav>
+
+    <nav aria-label="breadcrumb" style="margin-left: 160px;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Patient Selection</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Patient Dashboard</li>
+        </ol>
+      </nav>
+
+    <!--patient card along top-->
+    <div class="container">
+        <div class="row">
+        <div   id="patientInfo" style="margin: auto;">
+            <!-- Patient Image -->
+            <div style="float: left;">
+                <img src="img/MichaelScott.png" alt="..." class="card-img-left" style="width: 159px;">
+            </div>
+            <!-- Patient Information Table Next to Patient Image -->
+            <div style="float: left;">
+                <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #006A99;">
+                    <thead style="color: white;">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">MR#</th>
+                        <th scope="col">Provider</th>
+                    </tr>
+                    </thead>
+                    <tbody style="color: white;">
+                        
+                    <tr>
+                        <td>Michael Scott</td>
+                        <td>56</td>
+                        <td>Male</td>
+                        <td>1245783</td>
+                        <td>Health Insurance</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Room #</td>
+                        <td style="font-weight: bold;">DOB</td>
+                        <td style="font-weight: bold;">Admit Date</td>
+                        <td style="font-weight: bold;">Code</td>
+                        <td style="font-weight: bold;">Allergies</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3/15/1965</td>
+                        <td>9/9/2021</td>
+                        <td>Full Code</td>
+                        <td>None</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Tabs -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <ul class="nav nav-tabs" style="margin-top: 30px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Imaging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Labs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Care Plan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Health Section Table -->
+    <div class="container">
+        <div class="row">
+            <div   id="patientInfo" style="margin: auto;">
+                <div>
+                    <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #B0D1E0; max-width: 100%; width: 1110px;">
+                        <thead style="color: #006A99;; font-size: larger;">
+                        <tr>
+                            <th scope="col">Health</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody style="color: Black;">
+                        <tr>
+                            <th>Medical Number:</th>
+                            <td>12345</td>
+                            <th>Diet:</th>
+                            <td>Regular</td>
+                            <th>Braden Scale:</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>Allergies:</th>
+                            <td>None</td>
+                            <th>Fall Rate:</th>
+                            <td>None</td>
+                            
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            <!-- Edit Button -->
+                            <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vitals Section Table-->
+    <div class="container" style="padding-top: 30px;">
+        <div class="row">
+            <div   id="patientInfo" style="margin: auto;">
+                <div>
+                    <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #DBE1E4; max-width: 100%; width: 1110px;">
+                        <thead style="color: #006A99;; font-size: larger;">
+                        <tr>
+                            <th scope="col">Vitals</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody style="color: Black;">
+                        <tr>
+                            <th>Blood Pressure:</th>
+                            <td>120/80</td>
+                            <th>Respiration:</th>
+                            <td>14</td>
+                            <th>Temperature:</th>
+                            <td>98.5</td>
+                        </tr>
+                        <tr>
+                            <th>Pulse:</th>
+                            <td>70</td>
+                            <th>Oxygen Level:</th>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- Edit Button -->
+                            <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hospital Information Section Table -->
+    <div class="container" style="padding-top: 30px;">
+        <div class="row">
+            <div   id="patientInfo" style="margin: auto;">
+                <div>
+                    <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #B0D1E0; max-width: 100%; width: 1110px;">
+                        <thead style="color: #006A99;; font-size: larger;">
+                        <tr>
+                            <th scope="col">Hospital Information</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody style="color: Black;">
+                        <tr>
+                            <th>Room Number:</th>
+                            <td>1</td>
+                            <th>Admit Date:</th>
+                            <td>9/9/2021</td>
+                            <th>Code</th>
+                            <td>Full Code</td>
+                        </tr>
+                        <tr>
+                            <th>Diagnosis:</th>
+                            <td>Annual Checkup</td>
+                            <th>Isolation Status:</th>
+                            <td>None</td>
+                            <th>Activity Level:</th>
+                            <td>N/A</td>
+                            
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- Edit Button -->
+                            <td><button type="button" class="btn btn-warning">Edit</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50" style="margin-top: 80px;">
+        <div class="container text-center">
+            <small>Copyright &copy; Clark State College Medical Center 2021</small>
+        </div>
+    </footer>
+</body>
+ 
+</html>   
